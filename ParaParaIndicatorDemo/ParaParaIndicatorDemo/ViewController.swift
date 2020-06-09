@@ -34,12 +34,12 @@ class ViewController: UIViewController {
         paraparaIndicator.frame.size.width = 100
         paraparaIndicator.frame.size.height = 100
         paraparaIndicator.center = self.view.center
-        paraparaIndicator.tintColor = .brown
+        paraparaIndicator.tintColor = .cyan
         paraparaIndicator.timeInterval = 0.3
         
         paraparaIndicator.startAnimating()
         paraparaIndicator.layer.borderWidth = 2
-        paraparaIndicator.layer.borderColor = UIColor.brown.cgColor
+        paraparaIndicator.layer.borderColor = UIColor.cyan.cgColor
         paraparaIndicator.layer.cornerRadius = 20
         paraparaIndicator.clipsToBounds = true
         
