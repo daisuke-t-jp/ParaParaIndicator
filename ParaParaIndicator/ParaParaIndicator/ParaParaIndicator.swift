@@ -81,10 +81,12 @@ extension ParaParaIndicator {
                                           selector: #selector(timerFunc),
                                           userInfo: nil,
                                           repeats: true)
+        
+        RunLoop.current.add(self.timer!, forMode: .common)
     }
     
     private func stopTimer() {
-        self.timer?.invalidate()
+        self.timer?.invalidate()    // Invalidate timer and remove from run loop.
         self.timer = nil
     }
     
