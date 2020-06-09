@@ -32,7 +32,6 @@ public class ParaParaIndicator: UIView {
     private var timer: Timer?
     
     
-    
     // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,10 +50,8 @@ public class ParaParaIndicator: UIView {
     }
     
     private func initialize() {
-        imageView.frame.origin.x = 0
-        imageView.frame.origin.y = 0
-        imageView.frame.size.width = self.frame.size.width
-        imageView.frame.size.height = self.frame.size.height
+        
+        updateImageViewFrame()
         
         self.addSubview(imageView)
     }
@@ -68,10 +65,7 @@ extension ParaParaIndicator {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        imageView.frame.origin.x = 0
-        imageView.frame.origin.y = 0
-        imageView.frame.size.width = self.frame.size.width
-        imageView.frame.size.height = self.frame.size.height
+        updateImageViewFrame()
     }
     
 }
@@ -103,6 +97,19 @@ extension ParaParaIndicator {
         }
         
         imageView.image = self.images[self.currentIndex]
+    }
+    
+}
+
+
+// MARK: - ImageView
+extension ParaParaIndicator {
+    
+    private func updateImageViewFrame() {
+        imageView.frame.origin.x = 0
+        imageView.frame.origin.y = 0
+        imageView.frame.size.width = self.frame.size.width
+        imageView.frame.size.height = self.frame.size.height
     }
     
 }
