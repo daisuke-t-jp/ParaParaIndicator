@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ParaParaIndicator/ParaParaIndicator.xcodeproj">
+      location = "group:ParaParaIndicator.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ParaParaIndicatorDemo/ParaParaIndicatorDemo.xcodeproj">
