@@ -15,7 +15,6 @@ public class ParaParaIndicator: UIView {
     
     // MARK: - Property
     public var images: [UIImage] = []
-    public var imageTintColor: UIColor?
     public var hidesWhenStopped: Bool = true
     public var timeInterval: TimeInterval = 0.3 {
         didSet {
@@ -137,12 +136,6 @@ extension ParaParaIndicator {
         startTimer(timeInterval: self.timeInterval)
         
         imageView.image = self.images[self.currentIndex]
-        
-        guard let imageTintColor = self.imageTintColor else {
-            return
-        }
-        
-        imageView.tintColor = imageTintColor
     }
     
     public func stopAnimating() {
