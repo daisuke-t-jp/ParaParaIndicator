@@ -43,10 +43,10 @@ class ViewController: UIViewController {
         paraparaIndicator.timeInterval = 0.3
         
         paraparaIndicator.startAnimating()
-        paraparaIndicator.layer.borderWidth = 2
-        paraparaIndicator.layer.borderColor = UIColor.cyan.cgColor
-        paraparaIndicator.layer.cornerRadius = 20
-        paraparaIndicator.clipsToBounds = true
+//        paraparaIndicator.layer.borderWidth = 2
+//        paraparaIndicator.layer.borderColor = UIColor.cyan.cgColor
+//        paraparaIndicator.layer.cornerRadius = 20
+//        paraparaIndicator.clipsToBounds = true
         
         self.view.addSubview(paraparaIndicator)
         
