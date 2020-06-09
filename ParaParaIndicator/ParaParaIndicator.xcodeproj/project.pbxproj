@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7EDFBD9D248F96F70083A805 /* ParaParaIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EDFBD9B248F96F70083A805 /* ParaParaIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EDFBDA4248F98150083A805 /* ParaParaIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDFBDA3248F98150083A805 /* ParaParaIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7EDFBD98248F96F70083A805 /* ParaParaIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParaParaIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDFBD9B248F96F70083A805 /* ParaParaIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParaParaIndicator.h; sourceTree = "<group>"; };
 		7EDFBD9C248F96F70083A805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EDFBDA3248F98150083A805 /* ParaParaIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParaParaIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				7EDFBD9B248F96F70083A805 /* ParaParaIndicator.h */,
+				7EDFBDA3248F98150083A805 /* ParaParaIndicator.swift */,
 				7EDFBD9C248F96F70083A805 /* Info.plist */,
 			);
 			path = ParaParaIndicator;
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					7EDFBD97248F96F70083A805 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -131,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDFBDA4248F98150083A805 /* ParaParaIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +265,7 @@
 		7EDFBDA1248F96F70083A805 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -276,6 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Daisuke-TONOSAKI.ParaParaIndicator";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +291,7 @@
 		7EDFBDA2248F96F70083A805 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
