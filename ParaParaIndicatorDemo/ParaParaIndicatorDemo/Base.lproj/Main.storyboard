@@ -44,6 +44,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPc-VL-mqA">
                                 <rect key="frame" x="306" y="15" width="51" height="31"/>
+                                <connections>
+                                    <action selector="valueChangedHideWhenStopWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="aZH-Ad-rvt"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEp-wO-uqW">
                                 <rect key="frame" x="186" y="56.5" width="77" height="30"/>
@@ -52,6 +55,9 @@
                                     <constraint firstAttribute="height" constant="30" id="r0S-gW-54u"/>
                                 </constraints>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="buttonTappedStartWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a4h-mw-DXn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGu-32-33S">
                                 <rect key="frame" x="278" y="56.5" width="77" height="30"/>
@@ -60,9 +66,15 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="77" id="rxU-90-Yyy"/>
                                 </constraints>
                                 <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="buttonTappedStopWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="140-lJ-q86"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xxC-ZD-xYt">
                                 <rect key="frame" x="201" y="107.5" width="156" height="31"/>
+                                <connections>
+                                    <action selector="valueChangedTimeIntervalWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="CSW-gi-2mb"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -88,6 +100,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="xxC-ZD-xYt" id="eH7-Pk-yUe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,10 +12,15 @@ import ParaParaIndicator
 
 class ViewController: UIViewController {
 
+    @IBOutlet var slider: UISlider!
+    
     let paraparaIndicator = ParaParaIndicator()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        slider.minimumValue = 0.1
+        slider.maximumValue = 1
     }
 
     override func viewDidLayoutSubviews() {
@@ -44,6 +49,24 @@ class ViewController: UIViewController {
         paraparaIndicator.clipsToBounds = true
         
         self.view.addSubview(paraparaIndicator)
+        
+        slider.value = Float(paraparaIndicator.timeInterval)
+    }
+    
+    @IBAction func valueChangedHideWhenStop(sender: UISwitch) {
+        paraparaIndicator.hidesWhenStopped = sender.isOn
+    }
+    
+    @IBAction func valueChangedTimeInterval(sender: UISlider) {
+        paraparaIndicator.timeInterval = TimeInterval(slider.value)
+    }
+    
+    @IBAction func buttonTappedStart(sender: UIButton) {
+        paraparaIndicator.startAnimating()
+    }
+    
+    @IBAction func buttonTappedStop(sender: UIButton) {
+        paraparaIndicator.stopAnimating()
     }
     
 }
