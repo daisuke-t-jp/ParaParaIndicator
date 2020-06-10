@@ -3,7 +3,7 @@
 ## Overview
 
 `ParaParaIndicator` is flip animation indicator.  
-You can using like a `UIActivityIndicator`.
+You can using like a `UIActivityIndicatorView`.
 
 
 ## Installation
